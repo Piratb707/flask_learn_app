@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+</head>
+
+<style>
+    html{background-color: rgb(127.255.212);}
+</style>
+<body>
+
+{% if data %}
+    <table>
+        <tr><th>Имя</th><th>Фамилия</th><th>Дата рождения</th></tr>
+        {% for row in data %}
+            <tr><td> {{ row[0] }}</td><td>{{ row[1] }}</td><td>{{ row[2] }} </td></tr>
+        {% endfor %}
+    </table>
+{% endif %}
+
+<a href="/about">О нас</a>
+{% endblock %}
+</body>
+</html>
