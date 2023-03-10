@@ -11,16 +11,9 @@
 </style>
 <body>
 
-{% if data %}
-    <table>
-        <tr><th>Имя</th><th>Фамилия</th><th>Дата рождения</th></tr>
-        {% for row in data %}
-            <tr><td> {{ row[0] }}</td><td>{{ row[1] }}</td><td>{{ row[2] }} </td></tr>
-        {% endfor %}
-    </table>
-{% endif %}
+<a href="/login">Войти</a>
+<a href="/register">Регистрация</a>
 
-<a href="/about">О нас</a>
 {% endblock %}
 </body>
 </html>
